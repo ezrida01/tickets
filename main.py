@@ -12,6 +12,8 @@ from datetime import date, timedelta
 from selenium.webdriver.chrome.options import Options
 import pandas
 import undetected_chromedriver2 as uc
+from webdriver_manager.chrome import ChromeDriverManager
+
 def get_prices(cities, dates):
     options = Options()
     df = pandas.read_csv('whatismybrowser-user-agent-database.csv')
@@ -25,7 +27,7 @@ def get_prices(cities, dates):
     #options.add_argument('--headless=new')
     options.add_argument('--disable-gpu')  # Last I checked this was necessary.
     #options.add_argument('--disable-blink-features=AutomationControlled')
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
     #driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36'})
     #driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
     #driver = webdriver.Chrome(options=options)
