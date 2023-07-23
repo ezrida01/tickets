@@ -4,3 +4,4 @@ pandas~=2.0.3
 selenium~=4.10.0
 bs4~=0.0.1
 beautifulsoup4~=4.12.2
+webdriver_manager~=3.9.0
