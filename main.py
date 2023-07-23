@@ -11,7 +11,6 @@ import random
 from datetime import date, timedelta
 from selenium.webdriver.chrome.options import Options
 import pandas
-import undetected_chromedriver2 as uc
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 #test
