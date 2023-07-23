@@ -13,6 +13,7 @@ from selenium.webdriver.chrome.options import Options
 import pandas
 import undetected_chromedriver2 as uc
 from webdriver_manager.chrome import ChromeDriverManager
+#test
 
 def get_prices(cities, dates):
     options = Options()
